@@ -50,4 +50,5 @@ end
 
 group :development do
   gem "graphiql-rails"
+  gem "graphql-rails_logger"
 end
