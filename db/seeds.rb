@@ -10,7 +10,7 @@
 
 alliance_ids = [99005338]
 corporation_ids = [98558506, 98388312, 98500220]
-character_ids = [1597785719]
+character_ids = [1597785719, 2114077652]
 
 alliance_ids.each do |alliance_id|
   esi = EveOnline::ESI::Alliance.new(alliance_id: alliance_id)
