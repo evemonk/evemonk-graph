@@ -1,0 +1,15 @@
+volumes:
+  postgresql_data: {}
+
+services:
+  postgresql:
+    image: "docker.io/library/postgres:17.4"
+    container_name: "evemonk_graph_postgresql"
+    restart: "unless-stopped"
+    volumes:
+      - "postgresql_data:/var/lib/postgresql/data:rw"
+      - "./docker/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d:ro"
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: "trust"
+    ports:
+      - "5432:5432"
