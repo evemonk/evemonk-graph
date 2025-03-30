@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_03_30_155418) do
+ActiveRecord::Schema[8.0].define(version: 2025_03_30_172631) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -32,6 +32,27 @@ ActiveRecord::Schema[8.0].define(version: 2025_03_30_155418) do
     t.index ["executor_corporation_id"], name: "index_eve_alliances_on_executor_corporation_id"
     t.index ["faction_id"], name: "index_eve_alliances_on_faction_id"
     t.index ["name"], name: "index_eve_alliances_on_name"
+  end
+
+  create_table "eve_characters", force: :cascade do |t|
+    t.bigint "alliance_id"
+    t.datetime "birthday"
+    t.bigint "bloodline_id"
+    t.bigint "corporation_id"
+    t.text "description"
+    t.bigint "faction_id"
+    t.string "gender"
+    t.string "name"
+    t.bigint "race_id"
+    t.float "security_status"
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["alliance_id"], name: "index_eve_characters_on_alliance_id"
+    t.index ["bloodline_id"], name: "index_eve_characters_on_bloodline_id"
+    t.index ["corporation_id"], name: "index_eve_characters_on_corporation_id"
+    t.index ["faction_id"], name: "index_eve_characters_on_faction_id"
+    t.index ["race_id"], name: "index_eve_characters_on_race_id"
   end
 
   create_table "eve_corporations", force: :cascade do |t|
