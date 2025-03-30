@@ -38,6 +38,7 @@ gem "thruster", require: false
 # gem "image_processing", "~> 1.2"
 
 gem "graphql"
+gem "kaminari"
 
 group :development, :test do
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
