@@ -26,7 +26,7 @@ module Types
         null: true
 
       # field :creator_corporation, Types::EveCorporationType,
-      #   description: "Creator Corporation (Corporation)",
+      #   description: "Eve Alliance: Creator Corporation (Eve Corporation)",
       #   null: true
 
       field :creator_id, Integer,

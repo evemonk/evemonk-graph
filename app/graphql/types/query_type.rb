@@ -6,6 +6,8 @@ module Types
 
     field :alliance, resolver: Resolvers::Eve::AllianceResolver
 
+    field :corporation, resolver: Resolvers::Eve::CorporationResolver
+
     field :node, Types::NodeType, null: true, description: "Fetches an object given its ID." do
       argument :id, ID, required: true, description: "ID of the object."
     end
