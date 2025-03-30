@@ -40,6 +40,7 @@ gem "thruster", require: false
 gem "graphql"
 gem "kaminari"
 gem "pry-rails"
+gem "counter_culture"
 
 group :development, :test do
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
