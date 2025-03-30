@@ -41,6 +41,7 @@ gem "graphql"
 gem "kaminari"
 gem "pry-rails"
 gem "counter_culture"
+gem "eve_online"
 
 group :development, :test do
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
