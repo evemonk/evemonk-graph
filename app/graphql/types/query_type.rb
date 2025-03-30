@@ -2,6 +2,10 @@
 
 module Types
   class QueryType < Types::BaseObject
+    description "The query root of this schema"
+
+    field :alliance, resolver: Resolvers::Eve::AllianceResolver
+
     field :node, Types::NodeType, null: true, description: "Fetches an object given its ID." do
       argument :id, ID, required: true, description: "ID of the object."
     end
