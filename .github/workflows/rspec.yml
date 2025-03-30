@@ -16,6 +16,9 @@ permissions:
 
 env:
   CI: "yes"
+  POSTGRES_USER: "runner"
+  POSTGRES_DB: "evemonk_graph_test"
+  PGHOST: "localhost"
 
 jobs:
   rspec:
