@@ -6,23 +6,23 @@ module Types
       description "Eve Alliance object"
 
       field :id, ID,
-        description: "Eve Alliance ID",
+        description: "Eve Alliance: ID",
         null: false
 
       field :name, String,
-        description: "Eve Alliance Name",
+        description: "Eve Alliance: Name",
         null: true
 
       field :ticker, String,
-        description: "Eve Alliance Ticker",
+        description: "Eve Alliance: Ticker",
         null: true
 
       field :date_founded, GraphQL::Types::ISO8601DateTime,
-        description: "Eve Alliance Date founded",
+        description: "Eve Alliance: Date founded",
         null: true
 
       field :creator_corporation_id, Integer,
-        description: "Creator Corporation ID (Corporation ID)",
+        description: "Eve Alliance: Creator Corporation ID (Corporation ID)",
         null: true
 
       # field :creator_corporation, Types::EveCorporationType,
@@ -30,7 +30,7 @@ module Types
       #   null: true
 
       field :creator_id, Integer,
-        description: "Creator ID (Character ID)",
+        description: "Eve Alliance: Creator ID (Character ID)",
         null: true
 
       # field :creator, Types::EveCharacterType,
@@ -38,7 +38,7 @@ module Types
       #   null: true
 
       field :executor_corporation_id, Integer,
-        description: "Executor Corporation ID (Corporation ID)",
+        description: "Eve Alliance: Executor Corporation ID (Corporation ID)",
         null: true
 
       # field :executor_corporation, Types::EveCorporationType,
@@ -46,7 +46,7 @@ module Types
       #   null: true
 
       field :faction_id, Integer,
-        description: "Eve Faction ID",
+        description: "Eve Alliance: Eve Faction ID",
         null: true
 
       # field :faction, Types::EveFactionType,
@@ -54,24 +54,22 @@ module Types
       #   null: true
 
       field :corporations_count, Integer,
-        description: "Corporations count",
+        description: "Eve Alliance: Corporations count",
         null: true
 
       field :characters_count, Integer,
-        description: "Characters count",
+        description: "Eve Alliance: Characters count",
         null: true
 
-      # field :corporations, Types::EveCorporationType.connection_type,
-      #   description: "Corporations collection",
-      #   null: true
+      field :corporations, Types::Eve::CorporationType.connection_type,
+        description: "Eve Alliance: Corporations collection",
+        null: true
 
       # field :characters, Types::EveCharacterType.connection_type,
       #   description: "Characters collection",
       #   null: true
 
-      # field :created_at, GraphQL::Types::ISO8601DateTime, null: false
-
-      # field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
+      # field :synced_at, GraphQL::Types::ISO8601DateTime, null: false
     end
   end
 end

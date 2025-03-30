@@ -10,7 +10,7 @@ module Types
         null: false
 
       field :alliance_id, Integer,
-        description: "Alliance ID",
+        description: "Eve Alliance ID",
         null: true
 
       field :alliance, Types::Eve::AllianceType,
@@ -18,7 +18,7 @@ module Types
         null: true
 
       field :ceo_id, Integer,
-        description: "CEO ID (Character ID)",
+        description: "Eve Corporation: CEO ID (Character ID)",
         null: true
 
       # field :ceo, Types::EveCharacterType,
@@ -26,7 +26,7 @@ module Types
       #   null: true
 
       field :creator_id, Integer,
-        description: "Creator ID (Character ID)",
+        description: "Eve Corporation: Creator ID (Character ID)",
         null: true
 
       # field :creator, Types::Eve::CharacterType,
@@ -34,16 +34,16 @@ module Types
       #   null: true
 
       field :date_founded, GraphQL::Types::ISO8601DateTime,
-        description: "Eve Corporation Date founded",
+        description: "Eve Corporation: Date founded",
         null: true
 
       field :description, String,
         # method: :sanitized_description,
-        description: "Description",
+        description: "Eve Corporation: Description",
         null: true
 
       field :faction_id, Integer,
-        description: "Eve Faction ID",
+        description: "Eve Faction: ID",
         null: true
 
       # field :faction, Types::EveFactionType,
@@ -51,7 +51,7 @@ module Types
       #   null: true
 
       field :home_station_id, Integer,
-        description: "Home station ID (Station ID)",
+        description: "Eve Corporation: Home station ID (Station ID)",
         null: true
 
       # field :home_station, Types::EveStationType,
@@ -59,36 +59,36 @@ module Types
       #   null: true
 
       field :member_count, Integer,
-        description: "Member count",
+        description: "Eve Corporation: Member count",
         null: true
 
       field :name, String,
-        description: "Eve Corporation Name",
+        description: "Eve Corporation: Name",
         null: true
 
       field :shares, GraphQL::Types::BigInt,
-        description: "Eve Corporation Shares",
+        description: "Eve Corporation: Shares",
         null: true
 
       field :tax_rate, Float,
-        description: "Eve Corporation Tax rate",
+        description: "Eve Corporation: Tax rate",
         null: true
 
       field :ticker, String,
-        description: "Eve Corporation Ticker",
+        description: "Eve Corporation: Ticker",
         null: true
 
       field :url, String,
         # method: :corporation_url,
-        description: "Eve Corporation URL",
+        description: "Eve Corporation: URL",
         null: true
 
       field :war_eligible, Boolean,
-        description: "Eve Corporation War eligible",
+        description: "Eve Corporation: War eligible",
         null: true
 
       field :npc, Boolean,
-        description: "Eve Corporation NPC?",
+        description: "Eve Corporation: NPC?",
         null: true
 
       # field :characters, Types::EveCharacterType.connection_type,
