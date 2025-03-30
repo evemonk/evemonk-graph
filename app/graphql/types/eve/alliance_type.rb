@@ -3,9 +3,18 @@
 module Types
   module Eve
     class AllianceType < Types::BaseObject
-      field :id, ID, null: false
-      field :name, String
-      field :ticker, String
+      description "Eve Alliance object"
+
+      field :id, ID,
+        description: "Eve Alliance ID",
+        null: false
+
+      field :name, String,
+        description: "Eve Alliance Name"
+
+      field :ticker, String,
+        description: "Eve Alliance Ticker"
+
       field :creator_corporation_id, Integer
       field :creator_id, Integer
       field :date_founded, GraphQL::Types::ISO8601DateTime
