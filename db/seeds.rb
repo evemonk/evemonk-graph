@@ -9,7 +9,7 @@
 #   end
 
 alliance_id = 99005338
-corporation_id = 98558506
+corporation_ids = [98558506, 98388312, 98500220]
 
 esi = EveOnline::ESI::Alliance.new(alliance_id: alliance_id)
 
@@ -17,8 +17,10 @@ eve_alliance = Eve::Alliance.find_or_initialize_by(id: alliance_id)
 
 eve_alliance.update!(esi.as_json)
 
-esi = EveOnline::ESI::Corporation.new(corporation_id: corporation_id)
+corporation_ids.each do |corporation_id|
+  esi = EveOnline::ESI::Corporation.new(corporation_id: corporation_id)
 
-eve_corporation = Eve::Corporation.find_or_initialize_by(id: corporation_id)
+  eve_corporation = Eve::Corporation.find_or_initialize_by(id: corporation_id)
 
-eve_corporation.update!(esi.as_json)
+  eve_corporation.update!(esi.as_json)
+end
