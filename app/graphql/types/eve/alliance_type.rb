@@ -33,9 +33,9 @@ module Types
         description: "Eve Alliance: Creator ID (Eve Character ID)",
         null: true
 
-      # field :creator, Types::Eve::CharacterType,
-      #   description: "Eve Alliance: Creator (Eve Character)",
-      #   null: true
+      field :creator, Types::Eve::CharacterType,
+        description: "Eve Alliance: Creator (Eve Character)",
+        null: true
 
       field :executor_corporation_id, Integer,
         description: "Eve Alliance: Executor Corporation ID (Eve Corporation ID)",
@@ -65,9 +65,9 @@ module Types
         description: "Eve Alliance: Eve Corporations collection",
         null: true
 
-      # field :characters, Types::Eve::CharacterType.connection_type,
-      #   description: "Eve Alliance: Eve Characters collection",
-      #   null: true
+      field :characters, Types::Eve::CharacterType.connection_type,
+        description: "Eve Alliance: Eve Characters collection",
+        null: true
 
       # field :synced_at, GraphQL::Types::ISO8601DateTime, null: false
     end

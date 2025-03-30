@@ -36,7 +36,7 @@ module Types
         description: "Eve Character: Eve Corporation ID",
         null: true
 
-      field :corporation, Types::EveCorporationType,
+      field :corporation, Types::Eve::CorporationType,
         description: "Eve Character: Eve Corporation",
         null: true
 
